@@ -9,7 +9,7 @@ formulario de contacto.
 - **React 18 + Vite 6**, sitio estático.
 - **Framer Motion** para las animaciones al hacer scroll y el cambio de idioma.
 - **EmailJS** para el formulario de contacto, sin backend.
-- Deploy en **Cloudflare Pages**: cada push a `main` publica la nueva versión.
+- Deploy en **Cloudflare Workers** (<https://portfolio.juliocesarcruzkubber.workers.dev/>): cada push a `main` publica la nueva versión.
 
 ## Desarrollo
 
