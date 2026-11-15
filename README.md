@@ -1,23 +1,15 @@
-# Portafolio — Julio César Cruz K. (Variante B)
+# Portafolio de Julio César Cruz K.
 
-Landing page personal bilingüe (ES/EN), **tema claro / minimalista**. Sirve como punto
-central de contacto para clientes freelance y reclutadores.
-
-**Variante B** — fondo claro, mucho espacio en blanco, acento único verde azulado
-(`#0D9488`), sin elementos 3D. Hero clásico (texto a la izquierda, foto a la derecha),
-animaciones discretas y rápidas. La **Variante A** (oscura, con acentos 3D) vive en la
-carpeta `../portfolio`.
-
-> Mismo contenido, datos, idioma y funcionalidades que la Variante A — solo cambia la
-> dirección visual, para poder comparar ambas.
+Landing personal bilingüe (ES/EN) con tema claro y minimalista. Sirve como punto de
+contacto para clientes freelance y reclutadores: proyectos, stack, experiencia y un
+formulario de contacto.
 
 ## Stack
 
-- **React 18 + Vite** — sitio estático, deploy gratuito en Vercel/Netlify.
-- **Framer Motion** — scroll-reveals discretos (fade + slide-up corto y rápido),
-  transición de idioma, micro-interacciones de hover.
-- **EmailJS** — formulario de contacto sin backend.
-- Sin three.js: el bundle es notablemente más liviano que la Variante A.
+- **React 18 + Vite 6**, sitio estático.
+- **Framer Motion** para las animaciones al hacer scroll y el cambio de idioma.
+- **EmailJS** para el formulario de contacto, sin backend.
+- Deploy en **Cloudflare Pages**: cada push a `main` publica la nueva versión.
 
 ## Desarrollo
 
@@ -30,32 +22,26 @@ npm run preview  # sirve el build de producción
 
 ## Cómo editar el contenido
 
-Todo el contenido está separado del diseño (idéntico a la Variante A):
+El contenido está separado del diseño:
 
 | Qué | Dónde |
 |---|---|
-| Textos ES/EN (hero, secciones, labels) | [src/i18n/translations.js](src/i18n/translations.js) |
-| Proyectos destacados | [src/data/projects.js](src/data/projects.js) |
-| Experiencia (timeline) | [src/data/experience.js](src/data/experience.js) |
-| Stack / skills | [src/data/stack.js](src/data/stack.js) |
+| Textos ES/EN (hero, secciones, formulario) | [src/i18n/translations.js](src/i18n/translations.js) |
+| Proyectos | [src/data/projects.js](src/data/projects.js) |
+| Capturas de los proyectos | [src/assets/projects/](src/assets/projects/) (WebP, ~1200 px de ancho) |
+| Experiencia | [src/data/experience.js](src/data/experience.js) |
+| Stack | [src/data/stack.js](src/data/stack.js) |
 | WhatsApp, EmailJS, redes | [src/config.js](src/config.js) |
-| Color de acento | variables `--accent-1` / `--accent-2` en [src/index.css](src/index.css) |
+| Título, descripción e imagen al compartir | [index.html](index.html) y [public/og-image.jpg](public/og-image.jpg) (1200x630) |
+| Color de acento | `--accent-1` / `--accent-2` en [src/index.css](src/index.css) |
 
-Para cambiar el acento a un **índigo suave**: `--accent-1: #6366f1; --accent-2: #4f46e5;`
-en [src/index.css](src/index.css).
+### Agregar un proyecto
 
-## Diferencias respecto a la Variante A
+1. Guarda la captura en `src/assets/projects/` como `.webp`.
+2. Impórtala arriba de `src/data/projects.js` y agrega un objeto a la lista, con la
+   descripción en `es` y `en`, los `tags` y los enlaces (`repo` y `live`, o `null`).
+3. `featured: true` hace que la card ocupe todo el ancho. Conviene que la cantidad de
+   cards normales sea par para que la grilla quede completa.
 
-| Elemento | Variante A | Variante B |
-|---|---|---|
-| Fondo | Oscuro | Blanco / gris claro |
-| Acentos 3D | Sí (three.js) | No |
-| Animaciones | Llamativas, parallax | Sutiles y rápidas |
-| Hero | Centrado, typewriter | Texto izquierda, foto derecha, fade limpio |
-| Tipografía | Space Grotesk (display) | Plus Jakarta Sans + Inter (sans puro) |
-| Sensación | Técnica / impactante | Cálida / profesional |
-
-## Deploy
-
-Cualquier host estático sirve. Recomendado **Vercel** o **Netlify**: conectar el repo,
-build command `npm run build`, output `dist/`.
+Los proyectos privados van con `repo: null`. Si la captura muestra un panel con datos
+de clientes, usa una versión con datos de ejemplo (como la de Kruzapp).

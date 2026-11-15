@@ -25,6 +25,17 @@ function ProjectCard({ project, index }) {
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
     >
+      {project.image && (
+        <div className="project__shot">
+          <img
+            src={project.image}
+            alt={lang === 'en' ? `${project.name} screenshot` : `Captura de ${project.name}`}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      )}
+
       <div className="project__top">
         <h3 className="project__name">{project.name}</h3>
         {project.soon && <span className="project__badge">{t.projects.soon}</span>}

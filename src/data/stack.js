@@ -7,22 +7,22 @@
 export const stackGroups = [
   {
     key: 'backend',
-    items: ['C#', 'ASP.NET Core', 'PHP', 'Laravel'],
+    items: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'Hono'],
   },
   {
     key: 'frontend',
-    items: ['React', 'Angular', 'Bootstrap', 'JavaScript'],
+    items: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Angular'],
   },
   {
     key: 'database',
-    items: ['PostgreSQL', 'SQL Server', 'Diseño relacional'],
+    items: ['PostgreSQL', 'SQL Server', 'Cloudflare D1', 'Diseño relacional'],
   },
   {
     key: 'infra',
-    items: ['Cloudflare Workers', 'Railway', 'Git'],
+    items: ['Cloudflare Workers/Pages/R2', 'Railway', 'Docker', 'Git'],
   },
   {
     key: 'ai',
-    items: ['Claude Code', 'Gemini'],
+    items: ['Claude Code', 'Claude API'],
   },
 ]

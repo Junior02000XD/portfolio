@@ -9,8 +9,8 @@ export const experience = [
     role: { es: 'Desarrollador Full Stack (Freelance)', en: 'Full Stack Developer (Freelance)' },
     org: 'First Class Institute',
     period: {
-      es: 'feb 2026 — Presente',
-      en: 'Feb 2026 — Present',
+      es: 'feb 2026 - Presente',
+      en: 'Feb 2026 - Present',
       endPresent: true,
     },
   },
@@ -19,8 +19,8 @@ export const experience = [
     role: { es: 'Desarrollador Full Stack', en: 'Full Stack Developer' },
     org: 'Jalcruz',
     period: {
-      es: 'may 2026 — Presente',
-      en: 'May 2026 — Present',
+      es: 'may 2026 - Presente',
+      en: 'May 2026 - Present',
       endPresent: true,
     },
   },
@@ -29,8 +29,8 @@ export const experience = [
     role: { es: 'Monitor', en: 'Monitor' },
     org: 'First Class Institute',
     period: {
-      es: 'dic 2024 — oct 2025',
-      en: 'Dec 2024 — Oct 2025',
+      es: 'dic 2024 - oct 2025',
+      en: 'Dec 2024 - Oct 2025',
       endPresent: false,
     },
   },
